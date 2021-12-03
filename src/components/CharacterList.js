@@ -9,7 +9,7 @@ const CharacterList = ({characters, onCharacterSelected}) => {
     
 
     return (
-        <div>
+        <div id="characterList">
             <h2>Characters</h2>
             <ul>
                 {characterItems}

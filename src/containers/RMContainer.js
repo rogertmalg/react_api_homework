@@ -17,7 +17,7 @@ const RMContainer = () => {
       getCharacters();
     }, []);
 
-    const getCharacters = function(){
+    const getCharacters = () => {
         fetch('https://rickandmortyapi.com/api/character')
         .then(res => res.json())
         .then(characters => setCharacters(characters.results))

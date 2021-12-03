@@ -6,7 +6,7 @@ const CharacterDetails = ({character}) => {
         return <h2>Select a Character</h2>
     }
     return (
-        <div>
+        <div id="characterDetails">
             <h2>{character.name}</h2>
             <img src={character.image} alt={character.name} />
             <br/>

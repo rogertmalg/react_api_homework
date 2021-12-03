@@ -19,6 +19,7 @@ h1 {
   width:500px;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .container {
@@ -26,4 +27,23 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+#characterList {
+  background-color: rgba(255, 255, 255, 0.473);
+  border-radius: 10px;
+  width: 320px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+#characterDetails {
+  background-color: rgba(255, 255, 255, 0.473);
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
 }
