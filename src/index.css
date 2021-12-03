@@ -33,12 +33,13 @@ h1 {
   background-color: rgba(255, 255, 255, 0.473);
   border-radius: 10px;
   width: 320px;
-  text-align: justify;
-  text-justify: auto;
+  text-align: center;
 }
 
 ul {
   list-style: none;
+  display: table;
+  margin: 16px;
 }
 
 #characterDetails {
