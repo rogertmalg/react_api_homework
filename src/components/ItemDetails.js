@@ -1,6 +1,6 @@
 
 
-const CharacterDetails = ({item}) => {
+const ItemDetails = ({item}) => {
 
     if (!item) {
         return <h2>Select an item from the list</h2>
@@ -38,4 +38,4 @@ const CharacterDetails = ({item}) => {
     )
 }
 
-export default CharacterDetails;
+export default ItemDetails;

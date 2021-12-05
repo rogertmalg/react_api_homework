@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import CharacterList from "../components/CharacterList";
-import CharacterDetails from '../components/CharacterDetails';
+import ItemList from "../components/ItemList";
+import ItemDetails from '../components/ItemDetails';
 
 const RMContainer = ({types}) => {
 
@@ -28,9 +28,9 @@ const RMContainer = ({types}) => {
 
     return (
         <div class="container">
-            <CharacterList items={items} onItemSelected={onItemSelected} handleSelectChange={handleSelectChange} types={types}
+            <ItemList items={items} onItemSelected={onItemSelected} handleSelectChange={handleSelectChange} types={types}
             />
-            <CharacterDetails item={item}/>
+            <ItemDetails item={item}/>
         </div>
     )
 }

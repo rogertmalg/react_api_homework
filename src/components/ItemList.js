@@ -1,10 +1,10 @@
-import CharacterItem from "./CharacterItem";
+import SingleItem from "./SingleItem";
 import FilterBar from "./FilterBar";
 
 const CharacterList = ({items, onItemSelected, handleSelectChange, types}) => {
 
     const listItems = items.map((item) => {
-        return <CharacterItem item={item} key={item.id} onItemSelected={onItemSelected}/>
+        return <SingleItem item={item} key={item.id} onItemSelected={onItemSelected}/>
 
     })
     
