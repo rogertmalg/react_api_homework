@@ -38,11 +38,14 @@ h1 {
 
 ul {
   list-style: none;
-  display: table;
-  margin: 16px;
+  width: 100%;
 }
 
-#characterDetails {
+li {
+  width: 75%;
+}
+
+#itemDetails {
   background-color: rgba(255, 255, 255, 0.473);
   border-radius: 10px;
   width: 320px;

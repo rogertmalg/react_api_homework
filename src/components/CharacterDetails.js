@@ -1,19 +1,39 @@
 
 
-const CharacterDetails = ({character}) => {
+const CharacterDetails = ({item}) => {
 
-    if (!character) {
-        return <h2>Select a Character</h2>
+    if (!item) {
+        return <h2>Select an item from the list</h2>
+    }
+
+    if (item.dimension) {
+        return (
+            <div id="itemDetails">
+                <h2>{item.name}</h2>
+                <p>Type: {item.type}</p>
+                <p>Dimension: {item.dimension}</p>
+            </div>
+        )
+    }
+
+    if (item.air_date) {
+        return (
+            <div id="itemDetails">
+                <h2>{item.name}</h2>
+                <p>Air date: {item.air_date}</p>
+                <p>Episode: {item.episode}</p>
+            </div>
+        )
     }
     return (
-        <div id="characterDetails">
-            <h2>{character.name}</h2>
-            <img src={character.image} alt={character.name} />
+        <div id="itemDetails">
+            <h2>{item.name}</h2>
+            <img src={item.image} alt={item.name} />
             <br/>
-            <p>Status: {character.status}</p>
-            <p>Species: {character.species}</p>
-            <p>Gender: {character.gender}</p>
-            <p>Location: {character.location.name}</p>
+            <p>Status: {item.status}</p>
+            <p>Species: {item.species}</p>
+            <p>Gender: {item.gender}</p>
+            <p>Location: {item.location.name}</p>
         </div>
     )
 }

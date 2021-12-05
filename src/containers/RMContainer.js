@@ -1,37 +1,36 @@
 import React, {useState, useEffect} from 'react';
 import CharacterList from "../components/CharacterList";
-import CharacterDetails from '../components/CharacterDetails';  
+import CharacterDetails from '../components/CharacterDetails';
 
-const RMContainer = () => {
+const RMContainer = ({types}) => {
 
-    // const urls = {
-    //     "characters": "https://rickandmortyapi.com/api/character",
-    //     "locations": "https://rickandmortyapi.com/api/location",
-    //     "episodes": "https://rickandmortyapi.com/api/episode"
-    // };
-
-    const [characters, setCharacters] = useState([]);
-    const [character, setCharacter] = useState(null);
+    const [items, setItems] = useState([]);
+    const [item, setItem] = useState(null);
 
     useEffect(() => {
-      getCharacters();
-    }, []);
+      getData(types[0].url);
+    }, [types]);
 
-    const getCharacters = () => {
-        fetch('https://rickandmortyapi.com/api/character')
+    const getData= (url) => {
+        fetch(url)
         .then(res => res.json())
-        .then(characters => setCharacters(characters.results))
+        .then(items => setItems(items.results))
+        .catch(err => console.error);
     };
 
-    const onCharacterSelected = (character) => {
-        setCharacter(character);
+    const onItemSelected = (item) => {
+        setItem(item);
+    };
 
+    const handleSelectChange = event => {
+        getData(event.target.value);
     };
 
     return (
         <div class="container">
-            <CharacterList characters={characters} onCharacterSelected={onCharacterSelected} />
-            <CharacterDetails character={character}/>
+            <CharacterList items={items} onItemSelected={onItemSelected} handleSelectChange={handleSelectChange} types={types}
+            />
+            <CharacterDetails item={item}/>
         </div>
     )
 }

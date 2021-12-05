@@ -1,8 +1,8 @@
-import CharacterList from "./CharacterList"
 
-const CharacterItem = ({character, onCharacterSelected}) => {
+
+const CharacterItem = ({item, onItemSelected}) => {
     return (
-        <li onClick={ () => {onCharacterSelected(character)}}>{character.name}</li>
+        <li onClick={ () => {onItemSelected(item)}}>{item.name}</li>
     )
 }
 

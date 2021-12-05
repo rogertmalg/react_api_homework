@@ -1,18 +1,19 @@
 import CharacterItem from "./CharacterItem";
+import FilterBar from "./FilterBar";
 
-const CharacterList = ({characters, onCharacterSelected}) => {
+const CharacterList = ({items, onItemSelected, handleSelectChange, types}) => {
 
-    const characterItems = characters.map((character) => {
-        return <CharacterItem character={character} key={character.id} onCharacterSelected={onCharacterSelected}/>
+    const listItems = items.map((item) => {
+        return <CharacterItem item={item} key={item.id} onItemSelected={onItemSelected}/>
 
     })
     
 
     return (
         <div id="characterList">
-            <h2>Characters</h2>
+            <FilterBar handleSelectChange={handleSelectChange} types={types}/>
             <ul>
-                {characterItems}
+                {listItems}
             </ul>
         </div>
     )
