@@ -15,7 +15,7 @@ const RMContainer = ({types}) => {
         fetch(url)
         .then(res => res.json())
         .then(items => setItems(items.results))
-        .catch(err => console.error);
+        .catch(err => console.error(err));
     };
 
     const onItemSelected = (item) => {

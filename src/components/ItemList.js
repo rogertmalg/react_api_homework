@@ -1,7 +1,7 @@
 import SingleItem from "./SingleItem";
 import FilterBar from "./FilterBar";
 
-const CharacterList = ({items, onItemSelected, handleSelectChange, types}) => {
+const ItemList = ({items, onItemSelected, handleSelectChange, types}) => {
 
     const listItems = items.map((item) => {
         return <SingleItem item={item} key={item.id} onItemSelected={onItemSelected}/>
@@ -19,4 +19,4 @@ const CharacterList = ({items, onItemSelected, handleSelectChange, types}) => {
     )
 }
 
-export default CharacterList;
+export default ItemList;
